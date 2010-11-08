@@ -5,14 +5,15 @@ h1. Installation
 * Edit *[ Cassandra HOME ]* /conf/storage-conf.xml
 
 * Add new keyspace 
-
-@<Keyspace Name="AddressBook">
+```xml
+<Keyspace Name="AddressBook">
 	<ColumnFamily Name='Addresses' 
 		CompareWith="TimeUUIDType"/>
 	<ReplicaPlacementStrategy>org.apache.cassandra.locator.RackUnawareStrategy</ReplicaPlacementStrategy>
 	<ReplicationFactor>1</ReplicationFactor>
 	<EndPointSnitch>org.apache.cassandra.locator.EndPointSnitch</EndPointSnitch>
-</Keyspace>@
+</Keyspace>
+```
 
 * Kick start server by executing [Cassandra HOME]/bin/cassandra
 
