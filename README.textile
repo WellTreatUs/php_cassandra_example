@@ -6,13 +6,13 @@ h1. Installation
 
 * Add new keyspace 
 
-@<Keyspace Name="AddressBook">@
-@	<ColumnFamily Name='Addresses' @
-@		CompareWith="TimeUUIDType"/>@
-@	<ReplicaPlacementStrategy>org.apache.cassandra.locator.RackUnawareStrategy</ReplicaPlacementStrategy>@
-@	<ReplicationFactor>1</ReplicationFactor>@
-@	<EndPointSnitch>org.apache.cassandra.locator.EndPointSnitch</EndPointSnitch>@
-@</Keyspace>@
+@<Keyspace Name="AddressBook">
+	<ColumnFamily Name='Addresses' 
+		CompareWith="TimeUUIDType"/>
+	<ReplicaPlacementStrategy>org.apache.cassandra.locator.RackUnawareStrategy</ReplicaPlacementStrategy>
+	<ReplicationFactor>1</ReplicationFactor>
+	<EndPointSnitch>org.apache.cassandra.locator.EndPointSnitch</EndPointSnitch>
+</Keyspace>@
 
 * Kick start server by executing [Cassandra HOME]/bin/cassandra
 
@@ -23,6 +23,6 @@ h1. Installation
 * Due to some problem with TimeUUID conversion from FMT_STRING to FMT_BYTE "phpcassa" simply doesn't work.
 hence you can try out only insert functionality.
 
-best wishes,
+best we4techishes,
 nhm tanveer hossain khan (hasan)
 http://hasan.we4tech.com
