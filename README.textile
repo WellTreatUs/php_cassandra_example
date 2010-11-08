@@ -1,0 +1,28 @@
+h1. Installation
+
+ Download cassandra from http://cassandra.apache.org/ Unzip your copy
+
+* Edit *[ Cassandra HOME ]* /conf/storage-conf.xml
+
+* Add new keyspace 
+
+@<Keyspace Name="AddressBook">@
+@	<ColumnFamily Name='Addresses' @
+@		CompareWith="TimeUUIDType"/>@
+@	<ReplicaPlacementStrategy>org.apache.cassandra.locator.RackUnawareStrategy</ReplicaPlacementStrategy>@
+@	<ReplicationFactor>1</ReplicationFactor>@
+@	<EndPointSnitch>org.apache.cassandra.locator.EndPointSnitch</EndPointSnitch>@
+@</Keyspace>@
+
+* Kick start server by executing [Cassandra HOME]/bin/cassandra
+
+* Put this files under your server accessible path
+
+* Browse it through the site
+
+* Due to some problem with TimeUUID conversion from FMT_STRING to FMT_BYTE "phpcassa" simply doesn't work.
+hence you can try out only insert functionality.
+
+best wishes,
+nhm tanveer hossain khan (hasan)
+http://hasan.we4tech.com
